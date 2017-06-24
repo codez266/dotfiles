@@ -1,0 +1,23 @@
+Host gerrit gerrit.wikimedia.org
+Hostname = 208.80.154.81
+Hostname = gerrit.wikimedia.org
+Port = 29418
+User = codezee
+#LogLevel DEBUG3
+#ProxyCommand    nc -X connect -x 172.16.1.22:3128 %h %p
+#ServerAliveInterval 60
+Host *.eqiad.wmflabs
+    ProxyCommand ssh -a -W %h:%p codezee@primary.bastion.wmflabs.org
+Host *.wmflabs
+    User codezee
+#Host * !gerrit.wikimedia.org
+#     Ciphers chacha20-poly1305@openssh.com,aes256-gcm@openssh.com,aes128-gcm@openssh.com,aes256-ctr,aes192-ctr,aes128-ctr
+#     KexAlgorithms curve25519-sha256@libssh.org,diffie-hellman-group-exchange-sha256
+Host gerrit.wikimedia.org
+    KexAlgorithms +diffie-hellman-group1-sha1
+Host 172.16.28.110
+	IdentityFile ~/.ssh/ainlp.pub
+	IdentitiesOnly yes
+	Port 22
+Host ec2-52-40-157-234.us-west-2.compute.amazonaws.com
+	IdentityFile /home/sumit/.ssh/codezee-key-pair.pem

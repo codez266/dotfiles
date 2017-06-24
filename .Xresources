@@ -1,0 +1,152 @@
+Xft.lcdfilter: lcddefault
+/* #include "/home/arindam/.urxvt/Colors/Material.xrdb" */
+/* #include "/home/arindam/.urxvt/Colors/Github.xrdb" */
+/* #include "/home/arindam/.urxvt/Colors/Flatland.xrdb" */
+/* #include "/home/arindam/.urxvt/Colors/Gruvbox.xrdb" */
+/* #include "/home/arindam/.urxvt/Colors/OceanicMaterial.xrdb" */
+/* #include "/home/arindam/.urxvt/Colors/Solarized_Dark.xrdb" */
+/* #include "/home/arindam/.urxvt/Colors/Molokai.xrdb" */
+/* #include "/home/arindam/.urxvt/Colors/Cobalt2.xrdb" */
+#include "/home/sumit/.urxvt/Colors/Desert.xrdb"
+/* #include "/home/arindam/.urxvt/Colors/Monokai_Soda.xrdb" */
+/* #include "/home/arindam/.urxvt/Colors/Solarized_Dark_Higher_Contrast.xrdb" */
+/* #include "/home/arindam/.urxvt/Colors/Chalkboard.xrdb" */
+
+/*ColorScheme*/
+/* First is dark next is lighter */
+/* Black */
+*color0:       Ansi_0_Color
+*color8:       Ansi_8_Color
+/* Red */
+*color1:       Ansi_1_Color
+*color9:       Ansi_9_Color
+/* Green */
+*color2:       Ansi_2_Color
+*color10:      Ansi_10_Color
+/* Yellow */
+*color3:       Ansi_3_Color
+*color11:      Ansi_11_Color
+/* Blue */
+*color4:       Ansi_4_Color
+*color12:      Ansi_12_Color
+/* Magenta */
+*color5:       Ansi_5_Color
+*color13:      Ansi_13_Color
+/* Cyan */
+*color6:       Ansi_6_Color
+*color14:      Ansi_14_Color
+/* White */
+*color7:       Ansi_7_Color
+*color15:      Ansi_15_Color
+
+*colorBD:      Bold_Color
+*colorIT:      Italic_Color
+*colorUL:      Underline_Color
+*foreground:   Foreground_Color
+*background:   Background_Color
+/* *cursorColor:  Foreground_Color */
+/* *cursorColor2: Background_Color */
+*cursorColor:  #16afca
+/* *cursorColor:  Cursor_Color */
+/* *cursorColor2: Cursor_Color */
+/* *reverseVideo: true */
+*termName: xterm-256color
+
+/*XFT SETTINGS*/
+Xft.autohint: 0
+Xft.lcdfilter:  lcddefault
+/* Xft.hintstyle:  Full */
+/* Xft.hintstyle:  hintnone */
+Xft.hintstyle:  hintslight
+Xft.hinting: 1
+Xft.antialias: true
+/* Xft.antialias: True */
+Xft.rgba: rgb
+Xft.dpi: 96
+
+/*XTERM SETTINGS*/
+XTerm*utf8: 1
+Xterm*saveLines: 10000
+Xterm*cutchars: "`\"'&()*,:;<=>?[\\]^{|}$"
+/* *faceName: Source Code Pro for Powerline */
+/* xterm*scaleHeight: 0.75 */
+*faceName: Fira Mono Sans
+! *faceName: DejaVu Sans Mono for Powerline
+*faceSize: 10.5
+xft*forcePackedFont: true
+xterm*alternateScroll: true
+xterm*scrollTtyKeypress: true
+xterm*scrollTtyOutput: false
+xterm*savelines: 16384
+xterm*metaSendsEscape: true
+xterm*dynamicColors: true
+xterm*altIsNotMeta: true
+xterm*fastScroll:True
+xterm*decTerminalID: vt340
+xterm*numColorRegisters: 256
+xterm*bellIsUrgent: true
+xterm*vt100.translations: #override \
+        Shift <KeyPress> Up:      scroll-back(1, line) \n\
+        Shift <KeyPress> Down:    scroll-forw(1, line) \n\
+        Shift <KeyPress> Insert:  string(0x1b) string(0x5b) string(2;2~) \n\
+        Ctrl Shift <KeyPress> C:  select-end(PRIMARY,CLIPBOARD,CUT_BUFFER0) \n\
+        Ctrl Shift <KeyPress> V:  insert-selection(CLIPBOARD, CUT_BUFFER0, PRIMARY) \n
+		Ctrl Shift <KeyPress> C: copy-selection(CLIPBOARD)\n\
+
+
+/*URxvt SETTINGS*/
+URxvt.saveLines: 60000
+URxvt.cutchars: "`\"'&()*,:;<=>?[\\]^{|}$"
+
+URxvt.font:  \
+             xft:DejaVu Sans Mono:antialias=true:size=10.5, \
+             xft:Monaco:antialias=true:size=9, \
+             xft:Ubuntu Mono derivative Powerline:antialias=true:size=10.5, \
+             xft:Fantasque Sans Mono:antialias=true:size=10.5, \
+             xft:Menlo:antialias=true:size=9, \
+             xft:DejaVu Sans Mono:antialias=true:size=10.5
+
+!            xft:Droid Sans Mono slashed for Powerline:antialias=true:size=9, \
+!            !            xft:Consolas for Powerline:antialias=true:size=10, \
+!            !            xft:Hack:antialias=true:size=9, \
+!            !             xft:Pragmata Pro for
+!            Powerline:antialias=true:size=9.5, \
+!            !             xft:Consolas for Powerline:size=10, \
+!            !             xft:Roboto Mono:Regular:size=10, \
+!            !             xft:DejaVu Sans Mono for
+!            Powerline:bold:antialias=false:size=9, \
+!            !             xft:DejaVu Sans Mono:bold:antialias=false:size=9, \
+!            !             xft:DejaVu Sans Mono for
+!            Powerline:antialias=false:size=9
+!
+            URxvt.lineSpace: 1
+            URxvt.letterSpace: 0
+            URxvt.font-size.step: 1
+
+            URxvt.secondaryScreen: 1
+            URxvt.secondaryScroll: 1
+            URxvt.secondaryWheel: 1
+            URxvt*urgentOnBell:       true
+
+            URxvt*scrollBar:              false
+            URxvt*scrollTtyKeypress:      true
+            URxvt*scrollTtyOutput:        false
+            URxvt*skipScroll:             true
+            URxvt*jumpScroll:             false
+            URxvt.internalBorder:  5
+            Urxvt.borderColor: Background_Color
+
+            URxvt*cursorBlink: false
+            URxvt*iso14755: False
+            URxvt*perl-ext-common: default,clipboard,keyboard-select,font-size,matcher,url-select
+            /* URxvt*url-select.launcher:  firefox */
+            URxvt*matcher.launcher:  firefox
+! keyboard-select
+URxvt.keysym.M-s: perl:keyboard-select:activate
+URxvt.keysym.M-r: perl:keyboard-select:search
+! clipboard
+! ! update clipboard whenever primary gets updated
+URxvt.clipboard.autocopy: true
+URxvt.keysym.Shift-Control-C: perl:clipboard:copy
+URxvt.keysym.Shift-Control-V: perl:clipboard:paste
+URxvt.keysym.M-C-v: perl:clipboard:paste_escaped
