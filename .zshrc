@@ -79,20 +79,18 @@ export PATH="$PATH:/usr/lib64/qt-3.3/bin:/usr/local/bin:/usr/bin:/bin:/usr/local
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-#alias python='/usr/bin/python2'
 alias vi='/usr/bin/vim'
 alias phpcsmw='phpcs --standard=~/mwiki/codesniffer/MediaWiki'
 # colored completion - use my LS_COLORS
 zstyle ':completion:*:default' list-colors ${(s.:.)LS_COLORS}
-#export http_proxy=172.16.1.22:3128
-#export https_proxy=172.16.1.22:3128
 export PATH=~/.composer/vendor/bin:/home/sumit/os/pintosc/pintos/src/utils:~/SemEval/apache-maven-3.3.9/bin:$PATH
 export CLASSPATH="/home/sumit/sms-class/libs/stanford-parser-full-2016-10-31/"
-#export STANFORD_MODELS="/home/sumit/sms-class/libs/stanford-parser-full-2016-10-31/"
+# For java classpath, outdated but useful
 alias javaluc='java -cp
 /home/sumit/SemEval/lucene-5.3.1/core/lucene-core-5.3.1.jar:/home/sumit/SemEval/lucene-5.3.1/demo/lucene-demo-5.3.1.jar:/home/sumit/SemEval/lucene-5.3.1/analysis/common/lucene-analyzers-common-5.3.1.jar:/home/sumit/SemEval/lucene-5.3.1/queryparser/lucene-queryparser-5.3.1.jar'
-#export HTTP_PROXY=10.120.120.22:3128
 
+# For jekyll blog
 export PATH="$PATH:$HOME/.rvm/bin:$HOME/selenium/" # Add RVM to PATH for scripting
 source ~/.profile
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
+eval $(keychain --eval --quiet ~/.ssh/github_labs_server ~/.ssh/id_rsa_labs)
